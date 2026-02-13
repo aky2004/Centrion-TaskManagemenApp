@@ -1,0 +1,168 @@
+/* TasksView.css */
+
+.tasks-view-page {
+    @apply min-h-screen bg-gray-50 dark:bg-gray-900 pb-10;
+}
+
+.tasks-view-bg-blob-1 {
+    @apply fixed top-0 left-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[100px] animate-pulse pointer-events-none;
+}
+
+.tasks-view-bg-blob-2 {
+    @apply fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse pointer-events-none;
+}
+
+.tasks-view-nav {
+    @apply sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50;
+}
+
+.tasks-view-toolbar {
+    @apply flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6;
+}
+
+.tasks-view-switcher {
+    @apply flex bg-white dark:bg-gray-800 rounded-xl p-1 border border-gray-200 dark:border-gray-700 shadow-sm;
+}
+
+.tasks-view-switcher-btn {
+    @apply flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-bold transition-all;
+}
+
+.tasks-view-switcher-btn-active {
+    @apply bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-sm;
+}
+
+.tasks-view-switcher-btn-inactive {
+    @apply text-gray-500 hover:text-gray-700 dark:hover:text-gray-300;
+}
+
+.tasks-view-action-btn {
+    @apply flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all border;
+}
+
+.tasks-view-btn-primary {
+    @apply bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-md hover:shadow-lg hover:-translate-y-0.5 border-transparent;
+}
+
+.tasks-view-btn-secondary {
+    @apply bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700;
+}
+
+.tasks-view-btn-active {
+    @apply bg-primary-50 dark:bg-primary-900/20 border-primary-200 dark:border-primary-800 text-primary-600;
+}
+
+.tasks-view-filter-panel {
+    @apply mb-6 p-5 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm;
+}
+
+.tasks-view-filter-label {
+    @apply text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2;
+}
+
+.tasks-view-filter-tag {
+    @apply flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-semibold border transition-all;
+}
+
+.tasks-view-filter-tag-active {
+    @apply bg-gray-900 dark:bg-white text-white dark:text-gray-900 border-transparent;
+}
+
+.tasks-view-filter-tag-inactive {
+    @apply bg-gray-50 dark:bg-gray-700 text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-600;
+}
+
+.tasks-view-dropdown-menu {
+    @apply absolute right-0 top-full mt-1 w-52 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl z-50 overflow-hidden;
+}
+
+.tasks-view-dropdown-item {
+    @apply w-full text-left px-4 py-2.5 text-xs font-medium transition-colors;
+}
+
+.tasks-view-gallery-card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer;
+}
+
+.tasks-view-group-header {
+    @apply flex items-center gap-2 mb-3;
+}
+
+.tasks-view-group-title {
+    @apply text-sm font-bold text-gray-700 dark:text-gray-300;
+}
+
+.tasks-view-preset-modal-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm;
+}
+
+.tasks-view-preset-modal {
+    @apply w-full max-w-sm bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-6;
+}
+
+/* Timeline specific */
+.tasks-view-timeline-header-cell {
+    @apply flex-1 min-w-[30px] p-1 text-center text-[9px] font-bold border-r border-gray-100 dark:border-gray-700/50;
+}
+
+.tasks-view-timeline-row {
+    @apply flex border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/60 transition-colors;
+}
+
+.tasks-view-calendar-container {
+    @apply bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden;
+}
+
+/* List View */
+.tasks-view-list-row {
+    @apply flex items-center gap-4 px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/60 transition-colors border-b border-gray-100 dark:border-gray-800 last:border-0;
+}
+
+.tasks-view-list-title {
+    @apply font-semibold text-sm text-gray-900 dark:text-white truncate;
+}
+
+.tasks-view-list-subtitle {
+    @apply text-xs text-gray-500 dark:text-gray-400 truncate mt-0.5;
+}
+
+.tasks-view-list-priority {
+    @apply hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-bold uppercase;
+}
+
+.tasks-view-list-status {
+    @apply hidden md:inline text-xs text-gray-500 dark:text-gray-400 font-medium;
+}
+
+.tasks-view-list-date {
+    @apply text-xs text-gray-400 whitespace-nowrap;
+}
+
+.tasks-view-list-action {
+    @apply opacity-0 group-hover:opacity-100 p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-all;
+}
+
+.tasks-view-list-container {
+    @apply bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden;
+}
+
+/* Kanban in TasksView */
+.tasks-view-kanban-column {
+    @apply min-w-[280px] flex-1 bg-gray-50/80 dark:bg-gray-800/40 rounded-2xl p-3;
+}
+
+.tasks-view-kanban-header {
+    @apply flex items-center gap-2 mb-3 px-2;
+}
+
+.tasks-view-kanban-card {
+    @apply block p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer;
+}
+
+.tasks-view-kanban-card-title {
+    @apply text-sm font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2;
+}
+
+.tasks-view-kanban-card-project {
+    @apply text-[10px] text-gray-400 mt-2 truncate;
+}

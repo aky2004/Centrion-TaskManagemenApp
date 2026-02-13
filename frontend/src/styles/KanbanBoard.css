@@ -1,0 +1,103 @@
+/* KanbanBoard.css */
+
+.kanban-page {
+    @apply min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col h-screen overflow-hidden selection:bg-primary-500/30;
+}
+
+.kanban-bg-blob-1 {
+    @apply fixed top-0 left-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[100px] animate-pulse pointer-events-none;
+}
+
+.kanban-bg-blob-2 {
+    @apply fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] animate-pulse pointer-events-none;
+}
+
+.kanban-header-nav {
+    @apply sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50;
+}
+
+.kanban-board-container {
+    @apply flex-1 overflow-x-auto overflow-y-hidden p-6 relative z-10;
+}
+
+.kanban-columns-wrapper {
+    @apply flex h-full gap-8 min-w-max;
+}
+
+.kanban-column {
+    @apply w-[320px] flex flex-col h-full;
+}
+
+.kanban-column-header {
+    @apply flex items-center justify-between mb-6 px-1;
+}
+
+.kanban-col-badge {
+    @apply px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wider;
+}
+
+.kanban-add-task-btn {
+    @apply p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors;
+}
+
+.kanban-task-list {
+    @apply flex-1 overflow-y-auto pr-2 pb-4 space-y-4;
+}
+
+.kanban-empty-col {
+    @apply flex flex-col items-center justify-center h-32 border-2 border-dashed border-gray-100 dark:border-gray-800 rounded-2xl;
+}
+
+/* Task Card */
+.kanban-task-card {
+    @apply relative bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700/50 hover:shadow-lg hover:border-gray-200 dark:hover:border-gray-600 transition-all duration-300 cursor-pointer;
+}
+
+.kanban-task-priority {
+    @apply px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider;
+}
+
+.kanban-task-menu-btn {
+    @apply p-1 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity;
+}
+
+.kanban-task-menu {
+    @apply absolute right-0 top-6 w-40 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 z-50 py-1 overflow-hidden animate-fade-in;
+}
+
+.kanban-menu-item {
+    @apply w-full text-left px-3 py-2 text-xs font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors;
+}
+
+.kanban-task-title {
+    @apply font-bold text-gray-800 dark:text-gray-100 mb-2 leading-tight;
+}
+
+.kanban-task-desc {
+    @apply text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-4 leading-relaxed;
+}
+
+.kanban-task-footer {
+    @apply flex items-center justify-between pt-2 border-t border-gray-50 dark:border-gray-700/30 mt-auto;
+}
+
+/* Settings Modal */
+.kanban-settings-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in;
+}
+
+.kanban-settings-modal {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col;
+}
+
+.kanban-tab-btn {
+    @apply flex-1 py-3 text-sm font-medium border-b-2 transition-colors;
+}
+
+.kanban-tab-active {
+    @apply border-primary-500 text-primary-600 dark:text-primary-400;
+}
+
+.kanban-tab-inactive {
+    @apply border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400;
+}
