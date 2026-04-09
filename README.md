@@ -1,4 +1,4 @@
-# Centrion - Full-Stack Task Management & Collaboration Application
+# Centrion - Project Management & Collaboration Application
 
 A modern, production-ready task management and collaboration platform similar to Trello, Notion, and Asana. Built with the MERN stack (MongoDB, Express.js, React.js, Node.js) with real-time collaboration features powered by Socket.io.
 
